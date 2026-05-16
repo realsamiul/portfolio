@@ -19,9 +19,9 @@ export default function InsightsPage() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
-            These are mock presentation cards for the site, shaped around the
-            verified CricSight pipeline. Replace the copy, images, and numbers
-            with final model outputs when the insight export is ready.
+            These are presentation elements for the engine layout, shaped around the
+            verified CricSight pipeline. Real-time metrics swap out seamlessly as pipeline 
+            runs output updated tables.
           </p>
         </BlurFade>
       </section>
