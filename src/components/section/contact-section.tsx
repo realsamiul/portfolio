@@ -1,43 +1,34 @@
-import Link from "next/link";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
+import Link from "next/link";
+
+const BLUR_FADE_DELAY = 0.04;
 
 export default function ContactSection() {
   return (
-    <div className="border rounded-xl p-10 relative">
-      <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
-        <span className="text-background text-sm font-medium">Contact</span>
+    <section id="contact">
+      <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <div className="space-y-3">
+            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm font-semibold">
+              Contact Core
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Get in Touch
+            </h2>
+            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed">
+              Want to discuss features, data validation, or modeling iterations? Just shoot an email over to{" "}
+              <Link
+                href={`mailto:${DATA.contact.email}`}
+                className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+              >
+                {DATA.contact.email}
+              </Link>
+              . We track validation updates and data schema anomalies directly against our pipeline layers.
+            </p>
+          </div>
+        </BlurFade>
       </div>
-      <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
-        <FlickeringGrid
-          className="h-full w-full"
-          squareSize={2}
-          gridGap={2}
-          style={{
-            maskImage: "linear-gradient(to bottom, black, transparent)",
-            WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
-          }}
-        />
-      </div>
-      <div className="relative flex flex-col items-center gap-4 text-center">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Get in Touch
-        </h2>
-        <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Just shoot me a dm{" "}
-          <Link
-            href={DATA.contact.social.X.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-          >
-            with a direct question on twitter
-          </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all
-          soliciting.
-        </p>
-      </div>
-    </div>
+    </section>
   );
 }
-
