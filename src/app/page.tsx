@@ -118,7 +118,7 @@ export default function Page() {
 
       <section id="featured">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <div className="rounded-3xl border bg-linear-to-br from-card via-card/80 to-muted/30 p-6 shadow-sm">
+          <div className="rounded-3xl border bg-gradient-to-br from-card via-card/80 to-muted/30 p-6 shadow-sm">
             <Badge className="mb-4">Featured product promise</Badge>
             <h2 className="text-2xl font-semibold tracking-tight">
               Build things that would make a Bangladesh cricket fan say:
