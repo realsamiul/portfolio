@@ -18,9 +18,9 @@ export default function ArchitecturePage() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
-            CricSight is built as a staged pipeline: registry, ingestion,
-            delivery states, leakage-safe features, model outputs, weather
-            joins, insight generation, ranking, and narrative presentation.
+            CricSight is built as a staged pipeline: registry parsing, ingestion verification,
+            delivery states, leakage-safe features, model outputs, weather tracking joins, 
+            and generation logic.
           </p>
         </BlurFade>
       </section>
@@ -28,7 +28,7 @@ export default function ArchitecturePage() {
       <section>
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <h2 className="text-xl font-bold">Current pipeline</h2>
+            <h2 className="text-xl font-bold">Current pipeline steps</h2>
           </BlurFade>
 
           <div className="grid gap-3">
@@ -63,7 +63,7 @@ export default function ArchitecturePage() {
       <section>
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <h2 className="text-xl font-bold">Next steps</h2>
+            <h2 className="text-xl font-bold">Next active milestones</h2>
           </BlurFade>
 
           <div className="grid gap-3 sm:grid-cols-2">
